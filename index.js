@@ -1,4 +1,13 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js"
+
+const firebaseConfig = {
+
+}
+
+/* app uses the initialize app function from firebase, to initialize the app */
+const app = initializeApp(firebaseConfig)
+
+console.log(app)
 
 let myLeads = []
 const inputEl = document.getElementById("input-el")
