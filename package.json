@@ -1,5 +1,5 @@
 {
-  "name": "Scrim-s01uaas",
+  "name": "chrome-extension",
   "description": "https://scrimba.com/frontend-path-c0j/~09h",
   "scripts": {
     "start": "vite",
@@ -9,7 +9,7 @@
     "type": "module"
   },
   "dependencies": {
+    "firebase": "^11.5.0",
     "vite": "latest"
-  },
-  "devDependencies": {}
+  }
 }
