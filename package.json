@@ -1,12 +1,12 @@
 {
   "name": "chrome-extension",
   "description": "https://scrimba.com/frontend-path-c0j/~09h",
+  "type": "module",
   "scripts": {
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "type": "module"
+    "preview": "vite preview"
   },
   "dependencies": {
     "firebase": "^11.5.0",
