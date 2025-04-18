@@ -1,35 +1,3 @@
-/*import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js"
-import { getDatabase } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-database.js"
-
-import { initializeApp } from "firebase/app";
-import { getDatabase } from "firebase/database";
-*/
-
-/* firebase sdk code */
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyBUchIAhQpWmjKbx-L00jgNw31AoohunrU",
-  authDomain: "leads-tracker-app-31a91.firebaseapp.com",
-  databaseURL: "https://leads-tracker-app-31a91-default-rtdb.firebaseio.com",
-  projectId: "leads-tracker-app-31a91",
-  storageBucket: "leads-tracker-app-31a91.firebasestorage.app",
-  messagingSenderId: "503599630201",
-  appId: "1:503599630201:web:f70bf0a499359457ad91a8"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-
-// test
-
-console.log(app)
-
-/* code for the lead gen app */
-
 let myLeads = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
