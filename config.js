@@ -1,0 +1,2 @@
+export const DATABASE_URL =
+  "https://leads-tracker-app-fd467-default-rtdb.firebaseio.com/"
