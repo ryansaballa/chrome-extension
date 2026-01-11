@@ -4,6 +4,7 @@ import {
   ref,
   push,
   onValue,
+  remove,
 } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-database.js"
 import { DATABASE_URL } from "./config.js"
 
@@ -36,19 +37,20 @@ function render(leads) {
 }
 
 onValue(referenceInDB, function (lead) {
-  const snapshotValues = lead.val()
-  const leads = Object.values(snapshotValues)
-  render(leads)
+  const listofLeadsExist = lead.exists()
+  if (listofLeadsExist) {
+    const snapshotValues = lead.val()
+    const leads = Object.values(snapshotValues)
+    render(leads)
+  }
 })
 
 deleteBtn.addEventListener("dblclick", function () {
-  myLeads = []
-  render(myLeads)
+  remove(referenceInDB)
+  ulEl.innerHTML = " "
 })
 
 inputBtn.addEventListener("click", function () {
   push(referenceInDB, inputEl.value)
   inputEl.value = ""
-
-  render(myLeads)
 })
