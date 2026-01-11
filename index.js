@@ -3,6 +3,7 @@ import {
   getDatabase,
   ref,
   push,
+  onValue,
 } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-database.js"
 import { DATABASE_URL } from "./config.js"
 
@@ -33,6 +34,12 @@ function render(leads) {
   }
   ulEl.innerHTML = listItems
 }
+
+onValue(referenceInDB, function (lead) {
+  const snapshotValues = lead.val()
+  const leads = Object.values(snapshotValues)
+  render(leads)
+})
 
 deleteBtn.addEventListener("dblclick", function () {
   myLeads = []
